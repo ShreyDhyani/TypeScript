@@ -18,5 +18,15 @@ In aforementioned example we are using a variable 'message' and we are performin
 
 Now if we declare the variable message as 
 
-const meassge = "Hello"
+const message = "Hello"
 
+We wont be able to call ' message() ' because a string is not callable.
+
+To avoid such mistakes during runtime we use TypeScript. TypeScript adds an extra layer to aur development process to prevent any such mistakes.
+It allows us to strictly set the type of data type we want to accept for our varable.
+
+Find some examples and detailed description at 
+https://www.typescriptlang.org/docs/handbook/2/basic-types.html
+
+For some hands on coding exaple with real time output visit
+https://www.typescriptlang.org/play
