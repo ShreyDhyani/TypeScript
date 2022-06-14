@@ -6,11 +6,11 @@ TypeScript is a superset of JavaScript, which means, it have all the features of
 
 // Accessing the property 'toLowerCase' on 'message' and then calling it:
 
-message.toUpperCase();
+>  message.toUpperCase();
 
 // Calling 'message':
 
-message();
+> message();
 
 In aforementioned example we are using a variable 'message' and we are performing two operations on it.
 1. calling toUpperCase property from message and
@@ -18,7 +18,7 @@ In aforementioned example we are using a variable 'message' and we are performin
 
 Now if we declare the variable message as 
 
-const message = "Hello"
+> const message = "Hello"
 
 We wont be able to call ' message() ' because a string is not callable.
 
@@ -27,11 +27,11 @@ It allows us to strictly set the type of data type we want to accept for our var
 
 An example of using type script would be:
 
-1 let message: string = "Hello";
-
-2 message = "Olla";
-
-3 message = 34;
+> let message: string = "Hello";
+> 
+> message = "Olla"; 
+> 
+> message = 34; x
 
 While line 1 and 2 would work, line 3 will not be executed as it would have been in vanilla JS. By adding ": string" before variable decleration in line 1 we have fixed the datatype of variable 'message' to 'string', so while the message itself can change to another string, it is not possible to change it into another datatype.
 
@@ -41,5 +41,22 @@ https://www.typescriptlang.org/docs/handbook/2/basic-types.html
 For some hands on coding example with real side-by-side output visit
 https://www.typescriptlang.org/play
 
+Example of TypeScript in a function
 
-#TypeScript's Type System
+```JavaScript
+function greeter(person: string) {
+  return "Hello, " + person;
+}
+```
+The function defined above will only accept strings as input variable while other data type will fail.
+```JavaScript
+greeter("Hello There");
+```
+Will work since we are passing a 'string' as a datatype
+
+```JavaScript
+greeter(98);
+```
+Aforementioned function call on the other hand will fail as we are passing an 'int' while only 'strings' are acceptable
+
+As seen from above example, TypeScript allows us to _fix in_, the acceptable datatypes for our function. Thus it will decrease bugs and errors that rise due to type mismatch error and allow us to control the data flow a lot better than vanilla JS.
