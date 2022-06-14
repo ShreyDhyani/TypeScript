@@ -28,5 +28,5 @@ It allows us to strictly set the type of data type we want to accept for our var
 Find some examples and detailed description at 
 https://www.typescriptlang.org/docs/handbook/2/basic-types.html
 
-For some hands on coding exaple with real time output visit
+For some hands on coding example with real side-by-side output visit
 https://www.typescriptlang.org/play
