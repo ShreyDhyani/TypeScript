@@ -28,7 +28,9 @@ It allows us to strictly set the type of data type we want to accept for our var
 An example of using type script would be:
 
 1 let message: string = "Hello";
+
 2 message = "Olla";
+
 3 message = 34;
 
 While line 1 and 2 would work, line 3 will not be executed as it would have been in vanilla JS. By adding ": string" before variable decleration in line 1 we have fixed the datatype of variable 'message' to 'string', so while the message itself can change to another string, it is not possible to change it into another datatype.
