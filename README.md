@@ -60,7 +60,7 @@ As seen from above example, TypeScript allows us to _fix in_, the acceptable dat
 If you are familiar with _'java' or 'c'_ varients you will find that the logic of type decleration is the same, and that is exactly what type script do.
 It turns a loosely typed language like javascript into a strictly typed language like java thus making sure we do not have any type mismatch errors in our code.
 
-#Why TypeScript Was Created?
+# Why TypeScript Was Created?
 
 Now since we have some idea about why should we use typescript lets talk about why the need for typescript arose in the first place.
 To understand this we need to understand the history of its parent language, i.e. JavaScript.
