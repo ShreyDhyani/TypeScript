@@ -57,7 +57,6 @@ greeter(98);
 Aforementioned function call on the other hand will fail as we are passing an 'int' while only 'strings' are acceptable
 
 As seen from above example, TypeScript allows us to _fix in_, the acceptable datatypes for our function. Thus it will decrease bugs and errors that rise due to type mismatch error and allow us to control the data flow a lot better than vanilla JS.
-If you are familiar with _'java' or 'c'_ varients you will fint that the logic of type decleration is the same, and that is exactly what type script do.
-It turns a loosely typed language like javascript into a scrictly typed language like java thus making sure we do not have any type mismatch errors in our code.
+If you are familiar with _'java' or 'c'_ varients you will find that the logic of type decleration is the same, and that is exactly what type script do.
+It turns a loosely typed language like javascript into a strictly typed language like java thus making sure we do not have any type mismatch errors in our code.
 
-Now for some hands on practice for TypeScript we will be creating a to-do list app using create-react-app with typescript as template and tailwind for styling.
