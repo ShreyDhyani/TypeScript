@@ -24,7 +24,11 @@ interface Props {
 //See how the syntax below
 
 export const TextField: React.FC<Props> = () => {
+<<<<<<< HEAD
   // const [flag, setFlag] = useState<boolean | undefined>(false); This is infered type casting, here type is automatically given to flag which is boolean
+=======
+  //const [flag, setFlag] = useState<boolean | undefined>(false); //This is infered type casting, here type is automatically given to flag which is boolean
+>>>>>>> 3777746be57a13f5bd663bff835b6b2e81bf2826
   //I had to remove null and switch it to undefined since it is not accepted by input property display
   const [pokemonImageLink, setPokemondImageLink] = useState("");
   const [textInput, setTextInput] = useState("");
@@ -71,7 +75,7 @@ export const TextField: React.FC<Props> = () => {
       {/* Here I had to add undefined and remove null as disabled does not accept null to flag type */}
       <img
         src={pokemonImageLink}
-        alt={pokemonImageLink}
+        alt="No Data Available"
         width="200"
         height="300"
         className="m-auto"
