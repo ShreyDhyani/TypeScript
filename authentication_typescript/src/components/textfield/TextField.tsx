@@ -24,7 +24,7 @@ interface Props {
 //See how the syntax below
 
 export const TextField: React.FC<Props> = () => {
-  const [flag, setFlag] = useState<boolean | undefined>(false); //This is infered type casting, here type is automatically given to flag which is boolean
+  // const [flag, setFlag] = useState<boolean | undefined>(false); This is infered type casting, here type is automatically given to flag which is boolean
   //I had to remove null and switch it to undefined since it is not accepted by input property display
   const [pokemonImageLink, setPokemondImageLink] = useState("");
   const [textInput, setTextInput] = useState("");
@@ -33,7 +33,7 @@ export const TextField: React.FC<Props> = () => {
   const displayPokemonData = async (apiLink: string) => {
     let link = "";
     await axios
-      .get(apiLink)
+      .get(apiLink.toLowerCase())
       .then(async (response) => {
         console.log(response.data.sprites.front_default);
         link = response.data.sprites.front_default;
@@ -52,7 +52,7 @@ export const TextField: React.FC<Props> = () => {
       <input
         className="m-auto my-4 p-4 w-4/12 border-2"
         placeholder="Enter Text here"
-        disabled={flag}
+        // disabled={flag}
         value={textInput}
         onChange={(e) => {
           setTextInput(e.target.value);

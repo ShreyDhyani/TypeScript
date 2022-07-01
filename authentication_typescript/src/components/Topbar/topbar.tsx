@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
-export default function Topbar() {
+const Topbar: React.FC = () => {
   return (
-    <div className="Topbar h-14 w-screen bg-slate-400 flex-1">
-        {'Users'}
+    <div className="Topbar w-screen h-14 border-b-2 flex justify-center items-center z-50 ">
+      {"Authentication Forms"}
     </div>
-  )
-}
+  );
+};
+
+export default Topbar;
