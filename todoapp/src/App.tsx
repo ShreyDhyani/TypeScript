@@ -4,8 +4,9 @@ import { Todo } from "./Interfaces";
 import {
   createData,
   getData,
-  setData,
 } from "./conrollers/localstorageConrolers";
+// import { completeTodo } from "./conrollers/completeTodo";
+import { deleteTodo } from "./conrollers/deleteTodo";
 
 const App: React.FC = () => {
   const [task, setTask] = useState<string>("");
@@ -35,34 +36,19 @@ const App: React.FC = () => {
           { task: task, deadline: deadline, status: false },
         ])
       );
-
-      setTodos(getData());
+      setTodos([...getData()]);
       setDeadline(0);
       setTask("");
     }
   };
 
   const deleteTask = (todoName: string): void => {
-    localStorage.setItem(
-      "data",
-      JSON.stringify(
-        todos.filter((todo) => {
-          return todo.task !== todoName;
-        })
-      )
-    );
-    setTodos(getData());
+    setTodos(deleteTodo(todoName));
   };
 
-  const completeTask = (todoName: string): void => {
-    todos.map((todo: Todo) => {
-      if (todo.task === todoName) {
-        todo.status = true;
-      }
-      return todo;
-    });
-    setData(todos);
-  };
+  // const completeTask = (todoName:string): void =>{
+  //   setTodos(completeTodo(todoName));
+  // }
 
   useEffect(() => {
     if (!getData()) {
@@ -103,13 +89,13 @@ const App: React.FC = () => {
         </button>
       </div>
       <div className="TodoList flex flex-col mx-auto justify-center items-center mt-3">
-        {todos.map((todo: Todo, key: number) => {
+        {todos?.map((todo: Todo, key: number) => {
           return (
             <TodoTask
               key={key}
               todo={todo}
               deleteTask={deleteTask}
-              completeTask={completeTask}
+              // completeTask={completeTask}
             />
           );
         })}
